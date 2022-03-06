@@ -87,9 +87,12 @@
         </td>
         <td><%= rs1.getInt(3)%>
         </td>
-        <td><a href="incDecQuantityAction.jsp?id=<%=rs1.getInt(1)%>&quantity=inc"><i class='fas fa-plus-circle'></i></a> <%= rs1.getString(7)%>
-            <a href="incDecQuantityAction.jsp?id=<%=rs1.getInt(1)%>&quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
-        <td><%=rs1.getString(9)%></td>
+        <td><a href="incDecQuantityAction.jsp?id=<%=rs1.getInt(1)%>&quantity=inc"><i
+                class='fas fa-plus-circle'></i></a> <%= rs1.getString(7)%>
+            <a href="incDecQuantityAction.jsp?id=<%=rs1.getInt(1)%>&quantity=dec"><i
+                    class='fas fa-minus-circle'></i></a></td>
+        <td><%=rs1.getString(9)%>
+        </td>
         <td><a href="removeFromCart.jsp?id=<%=rs1.getInt(1)%>">Remove <i class='fas fa-trash-alt'></i></a></td>
     </tr>
     <%

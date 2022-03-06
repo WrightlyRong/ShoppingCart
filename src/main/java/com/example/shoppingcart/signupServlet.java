@@ -6,6 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 import com.example.shoppingcart.DbConnection;
+
 import java.sql.*;
 
 @WebServlet(name = "signupServlet", value = "/signupServlet")
@@ -25,13 +26,13 @@ public class signupServlet extends HttpServlet {
             DbConnection db = new DbConnection();
             Connection con = db.getConnection();
             PreparedStatement ps = con.prepareStatement("INSERT INTO users values(?,?,?)");
-            ps.setString(1,name);
-            ps.setString(2,email);
-            ps.setString(3,password);
+            ps.setString(1, name);
+            ps.setString(2, email);
+            ps.setString(3, password);
             ps.executeUpdate();
             response.sendRedirect("signup.jsp?msg=valid");
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
             response.sendRedirect("signup.jsp?msg=invalid");
         }
